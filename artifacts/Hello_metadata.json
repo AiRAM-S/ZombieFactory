@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.5.17+commit.d19bba13"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "text",
+						"type": "string"
+					}
+				],
+				"name": "echo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hello.sol": "Hello"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hello.sol": {
+			"keccak256": "0xc445a8013a5b04a2703427e631c7c7e75bfd2ef38aff6c959c80d32c50842a04",
+			"urls": [
+				"bzz-raw://3f6ca47428efbee559a7a4718ab2412c160c240fadd7a0d0434ff6122ad2a4d3",
+				"dweb:/ipfs/QmcQNqthSJ5jf1GMSwCksrdKTjY91CW6FT5BoHH7FJSfza"
+			]
+		}
+	},
+	"version": 1
+}
