@@ -27,4 +27,8 @@ contract ZombieFeeding is ZombieFactory {
         feedAndMultiply(_zombieId, _humanDna);
     }
 
+    function _refreshZombie(uint _zombieId) internal {
+        zombies[_zombieId].readyTime = uint32(now+cooldownTime);
+    }
+
 }
