@@ -1,2 +1,27 @@
 pragma solidity ^0.4.19;
 
+import "./ZombieFactory.sol";
+
+contract ZombieFeeding is ZombieFactory {
+    function feedAndMultiply (uint _zombieId, uint _targetDna) public {
+        require(zombieToOwner[_zombieId] == msg.sender);
+
+        Zombie myZombie = zombies[_zombieId];
+
+        uint _targetSlice = _targetDna % dnaModulus;
+        uint _newDna = (myZombie.dna + _targetSlice) / 2;
+        uint _newZDna = (_newDna - _newDna % 100) + 99;
+        _createZombie("No-one", _newZDna);
+    }
+
+    function _catchAHuman(uint _name) internal pure returns (uint) {
+        uint rand = uint(keccak256(_name));
+        return rand;
+    }
+
+    function feedOnHuman(uint _zombieId, uint _humanId) public {
+        uint _humanDna = _catchAHuman(_humanId);
+        feedAndMultiply(_zombieId, _humanDna);
+    }
+
+}

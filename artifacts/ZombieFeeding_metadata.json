@@ -25,6 +25,24 @@
 				"type": "function"
 			},
 			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_targetDna",
+						"type": "uint256"
+					}
+				],
+				"name": "feedAndMultiply",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"constant": true,
 				"inputs": [
 					{
@@ -81,6 +99,24 @@
 				"type": "function"
 			},
 			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_humanId",
+						"type": "uint256"
+					}
+				],
+				"name": "feedOnHuman",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -112,7 +148,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"ZombieFactory.sol": "ZombieFactory"
+			"ZombieFeeding.sol": "ZombieFeeding"
 		},
 		"libraries": {},
 		"optimizer": {
@@ -126,6 +162,12 @@
 			"keccak256": "0x650f80603806c97ede5266f867cb23ea57b021b6f446480b4d09e63990477751",
 			"urls": [
 				"bzzr://5aff80f7acacc3867edf6a48b47d3d374837fd02e03bb4ed2eb3fd3577ca0cf7"
+			]
+		},
+		"ZombieFeeding.sol": {
+			"keccak256": "0xd5f25e9dbed3b5c26532f16541f38b33c9db94ffcb63f05702e60190a4655fb2",
+			"urls": [
+				"bzzr://c3df799e5bc9a0449b0dceee3d36c162e2ea2ff9b90736a1e3ab30d7e261fd94"
 			]
 		}
 	},
