@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.4.19+commit.c4cbbb05"
+		"version": "0.4.26+commit.4563c3fc"
 	},
 	"language": "Solidity",
 	"output": {
@@ -174,6 +174,7 @@
 		"compilationTarget": {
 			"ZombieFactory.sol": "ZombieFactory"
 		},
+		"evmVersion": "byzantium",
 		"libraries": {},
 		"optimizer": {
 			"enabled": false,
@@ -183,9 +184,9 @@
 	},
 	"sources": {
 		"ZombieFactory.sol": {
-			"keccak256": "0xff84701a698242f88df84e90d7d5f61739026d20686884355db26001a4307520",
+			"keccak256": "0x823247e2bd3b1f822e0d0f98072a2ebb42cec606059fae8e42d71491a3a5aaae",
 			"urls": [
-				"bzzr://b7007f64d3f47a893b84f9bb3eb9ae1c63cb91d6846699b932be6ef41fb0d229"
+				"bzzr://3b23811d993d7473a4db2b56daf0762f9e29053221da2085fb7c12f12edaa7d0"
 			]
 		},
 		"ownable.sol": {

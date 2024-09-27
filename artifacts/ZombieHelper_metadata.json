@@ -59,6 +59,25 @@
 				"constant": true,
 				"inputs": [
 					{
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "getZombiesByOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
 						"name": "",
 						"type": "uint256"
 					}
@@ -72,6 +91,24 @@
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_newDna",
+						"type": "uint256"
+					}
+				],
+				"name": "changeDna",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -100,6 +137,24 @@
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_newName",
+						"type": "string"
+					}
+				],
+				"name": "changeName",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -190,7 +245,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"ZombieFeeding.sol": "ZombieFeeding"
+			"ZombieHelper.sol": "ZombieHelper"
 		},
 		"evmVersion": "byzantium",
 		"libraries": {},
@@ -211,6 +266,12 @@
 			"keccak256": "0x987c9df258102adeb56c40763bcef787d67cd4f13c0536e7f83fcc5eb0169f7b",
 			"urls": [
 				"bzzr://7341f692cdc4f4b589ed032e249350761e143b700fa23870c16c9d788012ff0b"
+			]
+		},
+		"ZombieHelper.sol": {
+			"keccak256": "0x62ce1e7760c4e3b63def03eba8553d71251e303f6742583206b1836dccc07290",
+			"urls": [
+				"bzzr://5396c8a0c5b48ea73272edc88d9017b8d6c85d6895482ee05f5383056c7cd949"
 			]
 		},
 		"ownable.sol": {
