@@ -29,6 +29,20 @@
 				"type": "function"
 			},
 			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "createRandomZombie",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -72,9 +86,9 @@
 	},
 	"sources": {
 		"ZombieFactory.sol": {
-			"keccak256": "0xfea6858af15e19d42b6082c7e7d8e3b8ae25a367d783a51ae8da3ceed710f475",
+			"keccak256": "0x390898e622502e7851e66f342394871907e862233800004bb9dc0225de28e2e5",
 			"urls": [
-				"bzzr://07f8f2827b400e6f9bff70fab0be0a51d4571ebba20e0f52783eb504f3befb2c"
+				"bzzr://7a97d2a59e553da0886be3a0e73913cb233c486e221b6bbe9bce5a7853c3937f"
 			]
 		}
 	},
