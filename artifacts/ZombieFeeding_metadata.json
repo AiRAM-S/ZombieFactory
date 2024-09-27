@@ -25,24 +25,6 @@
 				"type": "function"
 			},
 			{
-				"constant": false,
-				"inputs": [
-					{
-						"name": "_zombieId",
-						"type": "uint256"
-					},
-					{
-						"name": "_targetDna",
-						"type": "uint256"
-					}
-				],
-				"name": "feedAndMultiply",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"constant": true,
 				"inputs": [
 					{
@@ -53,12 +35,20 @@
 				"name": "zombies",
 				"outputs": [
 					{
-						"name": "name",
-						"type": "string"
-					},
-					{
 						"name": "dna",
 						"type": "uint256"
+					},
+					{
+						"name": "level",
+						"type": "uint32"
+					},
+					{
+						"name": "readyTime",
+						"type": "uint32"
+					},
+					{
+						"name": "name",
+						"type": "string"
 					}
 				],
 				"payable": false,
@@ -93,6 +83,34 @@
 					}
 				],
 				"name": "createRandomZombie",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
 				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
@@ -137,10 +155,34 @@
 				],
 				"name": "NewZombie",
 				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
 			}
 		],
 		"devdoc": {
-			"methods": {}
+			"methods": {
+				"transferOwnership(address)": {
+					"details": "Allows the current owner to transfer control of the contract to a newOwner.",
+					"params": {
+						"newOwner": "The address to transfer ownership to."
+					}
+				}
+			}
 		},
 		"userdoc": {
 			"methods": {}
@@ -159,15 +201,21 @@
 	},
 	"sources": {
 		"ZombieFactory.sol": {
-			"keccak256": "0x650f80603806c97ede5266f867cb23ea57b021b6f446480b4d09e63990477751",
+			"keccak256": "0xff84701a698242f88df84e90d7d5f61739026d20686884355db26001a4307520",
 			"urls": [
-				"bzzr://5aff80f7acacc3867edf6a48b47d3d374837fd02e03bb4ed2eb3fd3577ca0cf7"
+				"bzzr://b7007f64d3f47a893b84f9bb3eb9ae1c63cb91d6846699b932be6ef41fb0d229"
 			]
 		},
 		"ZombieFeeding.sol": {
-			"keccak256": "0xd5f25e9dbed3b5c26532f16541f38b33c9db94ffcb63f05702e60190a4655fb2",
+			"keccak256": "0xd52bed6f497434b8776c99770baa7769428deb6e74d2c956d934d704fdc2148f",
 			"urls": [
-				"bzzr://c3df799e5bc9a0449b0dceee3d36c162e2ea2ff9b90736a1e3ab30d7e261fd94"
+				"bzzr://a6ab41af43581996a61904072f40c03ac04fed243db61689621117a9fdf87369"
+			]
+		},
+		"ownable.sol": {
+			"keccak256": "0xb6f56b6e128b51aa787d6154cc03ab65c411c499b65f935e7266aee0598fb298",
+			"urls": [
+				"bzzr://7bcc27cd179f60177e40782766225bb9c2658ad6c4ac7576c8aae1adb795b747"
 			]
 		}
 	},
